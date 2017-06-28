@@ -127,6 +127,7 @@ title: "${this.state.title}"
 metaDescription: "${this.state.metaDescription}"
 author: "${this.state.author}"
 date: "${(new Date()).toISOString()}"
+draft: false
 layout: "post"
 featuredImage: "${(this.state.featuredImage && this.state.featuredImage.file.name) || ''}"
 featuredImageAlt: "${this.state.title}"
