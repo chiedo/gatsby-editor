@@ -8,4 +8,4 @@ Currently, we only have a blog post generator.
 
 Live example:
 
-- https://gatsby-editor.herokuapp.com/
+- https://gatsby-editor.netlify.com
