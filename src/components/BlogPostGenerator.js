@@ -10,7 +10,7 @@ import './BlogPostGenerator.css';
 
 const _initialState = {
   title: '',
-  metaDescription: '',
+  excerpt: '',
   author: '',
   date: '',
   featuredImage: null,
@@ -124,7 +124,7 @@ class BlogPostGenerator extends Component {
     const heading = 
 `---
 title: "${this.state.title}"
-metaDescription: "${this.state.metaDescription}"
+excerpt: "${this.state.excerpt}"
 author: "${this.state.author}"
 date: "${(new Date()).toISOString()}"
 draft: false
@@ -145,7 +145,7 @@ tags: ${tagsHeading}
       alertMsg += '- A title is required\n'
     }
 
-    if(!this.state.metaDescription){
+    if(!this.state.excerpt){
       alertMsg += '- A description is required\n'
     }
 
@@ -196,7 +196,7 @@ tags: ${tagsHeading}
             <div className="heading-inputs">
               <input type="text" name="title" placeholder="Title" onChange={this._handleInputChange} />
               <br/>
-              <input type="text" name="metaDescription" placeholder="Short description of your blog post"  onChange={this._handleInputChange}/>
+              <input type="text" name="excerpt" placeholder="Short description of your blog post"  onChange={this._handleInputChange}/>
               <br/>
               <input type="email" name="author" placeholder="Your email address"  onChange={this._handleInputChange} />
               <br/>
