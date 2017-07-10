@@ -198,7 +198,7 @@ tags: ${tagsHeading}
               <br/>
               <input type="text" name="excerpt" placeholder="Short description of your blog post"  onChange={this._handleInputChange}/>
               <br/>
-              <input type="next" name="author" placeholder="Your name (eg. John Smith)"  onChange={this._handleInputChange} />
+              <input type="text" name="author" placeholder="Your name (eg. John Smith)"  onChange={this._handleInputChange} />
               <br/>
               <input type="text" name="tags" placeholder="Enter tags for the blog post seperated by commas"  onChange={this._updateTags} />
               <br/>
