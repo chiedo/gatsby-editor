@@ -130,7 +130,6 @@ date: "${(new Date()).toISOString()}"
 draft: false
 layout: "post"
 featuredImage: "${(this.state.featuredImage && this.state.featuredImage.file.name) || ''}"
-featuredImageAlt: "${this.state.title}"
 tags: ${tagsHeading}
 ---`;
 
