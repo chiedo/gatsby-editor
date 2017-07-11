@@ -214,7 +214,11 @@ tags: ${tagsHeading}
     return (
       <div>
         <h1>Gatbsy Blog Post Generator</h1>
-        <small>Changes will be lost if you exit your browser. If you have code snippets to add, you really don't need this tool because you know how to code... but regardless, you would need to add the code snippets afterwards</small>
+        <small>Changes will be lost if you exit your browser.</small>
+        <br/>
+        <small>If you have code snippets to add, you really don't need this tool because you know how to code... but regardless, you would need to add the code snippets afterwards</small>
+        <br/>
+        <small>Alt tags are automatically generated from the image name. So if you want the alt tag to be 'John going for a walk' then the image you upload should be named john-going-for-a-walk.png</small>
         <div style={{margin: '0 auto', width: '1400px', maxWidth:'100%'}}>
           <div className="col" style={{width: editorWidth}}>
             <div className="heading-inputs">
