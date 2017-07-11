@@ -29,6 +29,20 @@ class BlogPostGenerator extends Component {
     this._updateTags = this._updateTags.bind(this);
     this._handleFeaturedImageUpload = this._handleFeaturedImageUpload.bind(this);
     this._downloadBlogPost = this._downloadBlogPost.bind(this);
+    this._showCode = this._showCode.bind(this);
+    this._hideCode = this._hideCode.bind(this);
+  }
+
+  _showCode() {
+    this.setState({
+      showCode: true,
+    });
+  }
+
+  _hideCode() {
+    this.setState({
+      showCode: false,
+    });
   }
 
   _onEditorStateChange(content) {
@@ -184,14 +198,25 @@ tags: ${tagsHeading}
 
   render() {
 
-    const { editorContent } = this.state;
+    const { editorContent, showCode } = this.state;
+    
+    let toggleCode = <div className='download-button' style={{width: '200px', background: 'grey'}} onClick={this._showCode}>Show Code</div>
+    let editorWidth = '100%';
+    let codeDisplay = 'none';
+
+    if(showCode) {
+      editorWidth = '50%';
+      codeDisplay = 'block';
+      toggleCode = <div className='download-button' style={{width: '200px', background: 'grey'}} onClick={this._hideCode}>Hide Code</div>
+    }
+
 
     return (
       <div>
         <h1>Gatbsy Blog Post Generator</h1>
         <small>Changes will be lost if you exit your browser. If you have code snippets to add, you really don't need this tool because you know how to code... but regardless, you would need to add the code snippets afterwards</small>
         <div style={{margin: '0 auto', width: '1400px', maxWidth:'100%'}}>
-          <div className="col">
+          <div className="col" style={{width: editorWidth}}>
             <div className="heading-inputs">
               <input type="text" name="title" placeholder="Title" onChange={this._handleInputChange} />
               <br/>
@@ -216,14 +241,17 @@ tags: ${tagsHeading}
               onEditorStateChange={this._onEditorStateChange}
               uploadCallback={this._uploadImageCallBack}
             />
+            <br/>
+            <div className="download-button" onClick={this._downloadBlogPost}>Download Blog Post</div>
+            <br/>
+            {toggleCode}
           </div>
-          <div className="col">
+          <div className="col" style={{display: codeDisplay}}>
             <textarea
               disabled
               className="blog-post-preview no-focus"
               value={editorContent && this._getEditorContent()}
             />
-            <div className="download-button" onClick={this._downloadBlogPost}>Download Blog Post</div>
           </div>
         </div>
       </div>
