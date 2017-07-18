@@ -174,6 +174,10 @@ tags: ${tagsHeading}
       alertMsg += '- A blog post is required\n'
     }
 
+    if(this.state.excerpt && this.state.excerpt.length < 60){
+      alertMsg += '- Your excerpt must be at least 60 characters\n'
+    }
+
     if(alertMsg){
       alert(alertMsg);
       return;
@@ -224,7 +228,7 @@ tags: ${tagsHeading}
             <div className="heading-inputs">
               <input type="text" name="title" placeholder="Title" onChange={this._handleInputChange} />
               <br/>
-              <input type="text" name="excerpt" placeholder="Short description of your blog post"  onChange={this._handleInputChange}/>
+              <input type="text" name="excerpt" placeholder="Short description of your blog post. It must be a complete sentence and at least 60 characters"  onChange={this._handleInputChange}/>
               <br/>
               <input type="text" name="author" placeholder="Your name (eg. John Smith)"  onChange={this._handleInputChange} />
               <br/>
