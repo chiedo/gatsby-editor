@@ -109,7 +109,7 @@ class BlogPostGenerator extends Component {
         this.setState({featuredImage: {
           file: file,
           localSrc: url,
-        }}, () => {console.dir(this.state)})
+        }})
       };
     }.bind(this);
   }
@@ -248,6 +248,11 @@ tags: ${tagsHeading}
               editorClassName="blog-post-generator-editor"
               onEditorStateChange={this._onEditorStateChange}
               uploadCallback={this._uploadImageCallBack}
+              toolbar={{
+                image: {
+                  alt: { present: true, mandatory: false },
+                }
+              }}
             />
             <br/>
             <div className="download-button" onClick={this._downloadBlogPost}>Download Blog Post</div>
