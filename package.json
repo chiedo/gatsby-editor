@@ -15,7 +15,7 @@
     "react-draft-wysiwyg": "^1.10.0"
   },
   "devDependencies": {
-    "react-scripts": "1.0.7"
+    "react-scripts": "^1.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
