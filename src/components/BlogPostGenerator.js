@@ -8,6 +8,11 @@ import JSZip from 'jszip';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import './BlogPostGenerator.css';
 
+// Prevent window closing accidentially
+window.onbeforeunload = function () {
+  return 'Are you sure you want to close the window';
+};
+
 const _initialState = {
   title: '',
   excerpt: '',
