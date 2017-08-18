@@ -1977,9 +1977,9 @@ draft-js@^0.10.1:
     immutable "~3.7.4"
     object-assign "^4.1.0"
 
-draftjs-to-html@^0.7.2:
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/draftjs-to-html/-/draftjs-to-html-0.7.4.tgz#6932b2ebae5c74bd70bc996f2b51d04f4688a48b"
+draftjs-to-html@^0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/draftjs-to-html/-/draftjs-to-html-0.7.5.tgz#50b2d1d813fb499966de8106fbeea9ea52c76951"
 
 draftjs-utils@^0.8.06:
   version "0.8.6"
