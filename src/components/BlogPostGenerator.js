@@ -171,10 +171,6 @@ tags: ${tagsHeading}
       alertMsg += '- An author is required\n'
     }
 
-    if(!this.state.featuredImage){
-      alertMsg += '- A featured image is required\n'
-    }
-
     if(!this.state.editorContent){
       alertMsg += '- A blog post is required\n'
     }
