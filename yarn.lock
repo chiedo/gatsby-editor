@@ -5105,9 +5105,9 @@ react-dom@^15.6.1:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react-draft-wysiwyg@^1.10.8:
-  version "1.10.8"
-  resolved "https://registry.yarnpkg.com/react-draft-wysiwyg/-/react-draft-wysiwyg-1.10.8.tgz#4076eb9a591a78af2280485c21960d606e209091"
+react-draft-wysiwyg@^1.10.9:
+  version "1.10.9"
+  resolved "https://registry.yarnpkg.com/react-draft-wysiwyg/-/react-draft-wysiwyg-1.10.9.tgz#8a8c24be3ad39b9c1eddb38e58f49c5796427ae5"
   dependencies:
     classnames "^2.2.5"
     draftjs-utils "^0.8.06"
