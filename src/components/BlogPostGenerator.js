@@ -188,8 +188,10 @@ tags: ${tagsHeading}
 
     const zip = new JSZip();
     zip.file('index.md', this._getEditorContent())
-
-    zip.file(this.state.featuredImage.file.name, this.state.featuredImage.file)
+    
+    if(this.state.featuredImage) { 
+      zip.file(this.state.featuredImage.file.name, this.state.featuredImage.file)
+    }
 
     for(let upload of this.state.uploadedImages) {
       zip.file(upload.file.name, upload.file)
