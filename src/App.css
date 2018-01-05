@@ -24,3 +24,12 @@
 }
 
 img { max-width: 100%; }
+
+.rdw-editor-toolbar {
+  position: fixed;
+  top: 0;
+  background: white;
+  z-index: 999;
+}
+
+#root { padding-top: 50px; }
