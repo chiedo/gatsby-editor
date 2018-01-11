@@ -188,6 +188,7 @@ tags: ${tagsHeading}
 
     const zip = new JSZip();
     zip.file('index.md', this._getEditorContent())
+    zip.file('.blank', '') // This makes sure a folder is created
     
     if(this.state.featuredImage) { 
       zip.file(this.state.featuredImage.file.name, this.state.featuredImage.file)
